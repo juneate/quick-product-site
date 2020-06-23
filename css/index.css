@@ -1,0 +1,9 @@
+.tile {
+	--col: #ddd;
+	width: 10em;
+	border-radius: 1em;
+	background-color: var(--col);
+}
+.info {
+
+}
