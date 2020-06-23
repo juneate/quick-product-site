@@ -47,7 +47,8 @@ const getProductAsHtmlString = ({color, name, price, images}) => {
 
 
 document.getElementById('products').innerHTML = products
-	.filter(({price}) => price < 50)
+	.filter(({name}) => name.indexOf('range') > -1)
+	.filter(({price}) => price > 10 && price < 50)
 	.sort((a, b) => b.price - a.price)
 	.map(getProductAsHtmlString)
 	.join('\n')
